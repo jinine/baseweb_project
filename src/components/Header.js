@@ -26,18 +26,18 @@ export default function Header() {
   ]);
   return (
     <AppNavBar
-      title="Title"
+      title="Tristan's Website"
       mainItems={mainItems}
       onMainItemSelect={item => {
         setMainItems(prev => setItemActive(prev, item));
       }}
-      username="Umka Marshmallow"
-      usernameSubtitle="5 Stars"
-      userItems={[
-        { icon: Overflow, label: "User A" },
-        { icon: Overflow, label: "User B" }
-      ]}
-      onUserItemSelect={item => console.log(item)}
+      // username="Tristan Engen"
+      // usernameSubtitle="Best there ever was"
+      // userItems={[
+      //   { icon: Overflow, label: "User A" },
+      //   { icon: Overflow, label: "User B" }
+      // ]}
+      // onUserItemSelect={item => console.log(item)}
     />
   );
 }
