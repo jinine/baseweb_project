@@ -21,7 +21,7 @@ export default function Header() {
       label: "Main B",
       navExitIcon: Delete,
       children: [
-        { icon: Upload, label: "Secondary A" },
+        { icon: Upload, label: "Secondary A"},
         { icon: Upload, label: "Secondary B" }
       ]
     }

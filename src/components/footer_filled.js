@@ -2,7 +2,6 @@ import * as React from "react";
 import Footer from "./footer";
 
 export default function FooterFilled() {
-    
     return (
       <Footer>
         <Footer.Wrapper>

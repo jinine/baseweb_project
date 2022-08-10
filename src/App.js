@@ -24,7 +24,6 @@ function App() {
     <Header />
       <Centered>
         <Homepage />
-     
       </Centered>
       <FooterFilled />
     </BaseProvider>
