@@ -3,6 +3,9 @@ import Box from "@mui/material/Box";
 import bgImage from "../assets/images/World-Map-PNG-Image.png";
 import announcementBGImage from "../assets/images/sky-image.jpeg";
 import {useStyletron} from 'baseui';
+import { Client as Styletron } from 'styletron-engine-atomic';
+import { Provider as StyletronProvider } from 'styletron-react';
+import { styled } from 'baseui';
 
 import {Block} from 'baseui/block';
 import {Tabs, Tab} from 'baseui/tabs-motion';
@@ -10,12 +13,19 @@ import {Heading, HeadingLevel} from 'baseui/heading';
 import {ParagraphSmall} from 'baseui/typography';
 import {Button} from 'baseui/button';
 import { StyledLink } from "baseui/link";
+import {FlexGrid, FlexGridItem} from 'baseui/flex-grid';
 
 //icons
-import Icon from 'baseui/icon/check'
 import { FaRegStar, FaRegHeart, FaRegThumbsUp } from "react-icons/fa" ;
+import Star from '../assets/icons/Star';
 
-
+const engine = new Styletron();
+const Centered = styled('div', {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  height: '100%',
+});
 
 export default function Homepage() {
   const [activeKey, setActiveKey] = React.useState(0);
@@ -165,7 +175,7 @@ export default function Homepage() {
     <div style={{paddingLeft: '250px'}}>
           <h2>Test Items</h2>
     </div>
-    <div style={{width:'100%'}}> 
+    <div style={{width:'100%', minHeight:'400px'}}> 
         <div style={{width:'35%', float:'left', marginLeft: '250px'}}>
           <Box
             minHeight="25vh"
@@ -204,8 +214,75 @@ export default function Homepage() {
         </div>
     </div>
 
+    {/* Fourth Component */}
+    <div style={{width:'100%', paddingTop:'50px'}}>
+    <FlexGrid
+      flexGridColumnCount={3}
+      flexGridColumnGap="scale800"
+      flexGridRowGap="scale800"
+      paddingLeft='250px'
+      paddingRight='250px'
+    >
+      <FlexGridItem>
+          <Centered>
+            <Block> 
+              <h1>
+              <Star />
+              </h1>
+              <h2>
+                Heading 1
+              </h2>
+              <ParagraphSmall>
+              Find out how we started, what drives us, 
+              and how we’re reimagining how the world moves.
+              </ParagraphSmall>
+              <StyledLink href='/'>
+                Link to Item 
+              </StyledLink>
+            </Block>
+           
+          </Centered>
+      </FlexGridItem>
+      <FlexGridItem >
+      <Centered>
+            <Block> 
+              <h1>
+              <Star />
+              </h1>
+              <h2>
+                Heading 2
+              </h2>
+              <ParagraphSmall>
+              Find out how we started, what drives us, 
+              and how we’re reimagining how the world moves.
+              </ParagraphSmall>
+              <StyledLink href='/'>
+                Link to Item 
+              </StyledLink>
+            </Block>
+          </Centered>
+      </FlexGridItem>
+      <FlexGridItem>
+      <Centered>
+            <Block> 
+              <h1>
+              <Star />
+              </h1>
+              <h2>
+                Heading 3
+              </h2>
+              <ParagraphSmall>
+              Find out how we started, what drives us, 
+              and how we’re reimagining how the world moves.
+              </ParagraphSmall>
+              <StyledLink href='/'>
+                Link to Item 
+              </StyledLink>
+            </Block>
+          </Centered>
+      </FlexGridItem>
+    </FlexGrid>
     </div>
-    
-   
+   </div>
   );
 }
