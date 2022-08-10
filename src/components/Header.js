@@ -12,9 +12,11 @@ import {
 
 export default function Header() {
   const [mainItems, setMainItems] = React.useState([
-    { icon: Upload, label: "Main A" },
-    {
+    {  
       active: true,
+      icon: Upload, label: "Main A" 
+    },
+    {
       icon: ChevronDown,
       label: "Main B",
       navExitIcon: Delete,
