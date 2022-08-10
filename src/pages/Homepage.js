@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Box from "@mui/material/Box";
-import bgImage from "../assets/images/sky-image.jpeg";
+import bgImage from "../assets/images/World-Map-PNG-Image.png";
 import {useStyletron} from 'baseui';
 
 // import {Heading, HeadingLevel} from 'baseui/heading';
@@ -31,9 +31,9 @@ export default function Homepage() {
 
     <Block
       backgroundColor="white"
-      width="75%"
+      width="80%"
       align = "left"
-      height="250px"
+      height="400px"
     >
       <Tabs
       activeKey={activeKey}
