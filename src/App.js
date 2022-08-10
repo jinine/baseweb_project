@@ -1,11 +1,12 @@
-import './App.css';
+//dependencies
 import { Client as Styletron } from 'styletron-engine-atomic';
 import { Provider as StyletronProvider } from 'styletron-react';
 import { LightTheme, BaseProvider, styled } from 'baseui';
+
+//importing pages/components
 import Header from './components/Header';
-import Footer from './components/footer';
-// import { Route, Routes } from 'react-router-dom';
 import Homepage from './pages/Homepage';
+import FooterFilled from './components/footer_filled';
 
 const engine = new Styletron();
 const Centered = styled('div', {
@@ -25,15 +26,7 @@ function App() {
         <Homepage />
      
       </Centered>
-      <Footer>
-        <Footer.Wrapper>
-          <Centered>
-            <Footer.Title>
-              Thank you for visiting. 
-            </Footer.Title>
-          </Centered>
-        </Footer.Wrapper>
-      </Footer>
+      <FooterFilled />
     </BaseProvider>
   </StyletronProvider>
   </>
