@@ -16,7 +16,6 @@ export default function Homepage() {
   return (
     <>
     <Box
-        className="image-box"
         minHeight="75vh"
         width="100%"
         sx={{
@@ -27,14 +26,14 @@ export default function Homepage() {
           placeItems: "center",
         }}
       >
-      <Grid>
-      <Cell span={[1, 0]}>
-          <Inner></Inner>
-        </Cell>
-      <Cell span={[1, 4, 6]}>
-          <Inner> 
-          <Block
+    <div style={{width:'100%'}}>
+      <div style={{width:'50%', float:'left', padding:'25px'}}>
+
+    <Block
       backgroundColor="white"
+      width="75%"
+      align = "left"
+      height="250px"
     >
       <Tabs
       activeKey={activeKey}
@@ -45,16 +44,10 @@ export default function Homepage() {
       <Tab title="Second" artwork={Check}>Fear is the mind-killer.</Tab>
       <Tab title="Third" artwork={Check}>Fear is the little-death that brings total obliteration.</Tab>
     </Tabs>
-      </Block> 
-      </Inner>
-        </Cell>
-        <Cell span={[1, 2, 3]}>
-          <Inner></Inner>
-        </Cell>
-        <Cell span={[1, 2, 3]}>
-          <Inner></Inner>
-        </Cell>
-      </Grid>
+
+    </Block>
+    </div>
+    </div>
       </Box>
     </>
   );
