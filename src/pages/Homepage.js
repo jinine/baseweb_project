@@ -3,12 +3,14 @@ import Box from "@mui/material/Box";
 import bgImage from "../assets/images/World-Map-PNG-Image.png";
 import {useStyletron} from 'baseui';
 
-// import {Heading, HeadingLevel} from 'baseui/heading';
 import {Block} from 'baseui/block';
-// import {ParagraphSmall} from 'baseui/typography';
 import {Tabs, Tab} from 'baseui/tabs-motion';
-import {Grid, Cell} from 'baseui/layout-grid';
-import {Check} from 'baseui/icon';
+import {Heading, HeadingLevel} from 'baseui/heading';
+import {ParagraphSmall} from 'baseui/typography';
+
+//icons
+import Icon from 'baseui/icon/check'
+import { FaRegStar, FaRegHeart, FaRegThumbsUp } from "react-icons/fa" ;
 
 export default function Homepage() {
   const [activeKey, setActiveKey] = React.useState(0);
@@ -16,7 +18,7 @@ export default function Homepage() {
   return (
     <>
     <Box
-        minHeight="75vh"
+        minHeight="100vh"
         width="100%"
         sx={{
           backgroundImage: `url(${bgImage})`,
@@ -24,6 +26,7 @@ export default function Homepage() {
           backgroundPosition: "top",
           display: "grid",
           placeItems: "center",
+          overflow: "auto",
         }}
       >
     <div style={{width:'100%'}}>
@@ -40,9 +43,42 @@ export default function Homepage() {
       onChange={({activeKey}) => setActiveKey(activeKey)}
       activateOnFocus={false}
     >
-      <Tab title="First" artwork={Check}>I must not fear.</Tab>
-      <Tab title="Second" artwork={Check}>Fear is the mind-killer.</Tab>
-      <Tab title="Third" artwork={Check}>Fear is the little-death that brings total obliteration.</Tab>
+      <Tab title="Featured 1" artwork={FaRegStar}>
+        <Block>
+          <HeadingLevel>
+            <Heading>
+              Featured Item 1 
+            </Heading>
+            <ParagraphSmall>
+              I must not fear.
+            </ParagraphSmall>
+          </HeadingLevel>
+        </Block>
+      </Tab>
+      <Tab title="Featured 2" artwork={FaRegHeart}>
+      <Block>
+          <HeadingLevel>
+            <Heading>
+              Featured Item 2
+            </Heading>
+            <ParagraphSmall>
+              Fear is the mind-killer. 
+            </ParagraphSmall>
+          </HeadingLevel>
+        </Block>
+      </Tab>
+      <Tab title="Featured 3" artwork={FaRegThumbsUp}>
+      <Block>
+          <HeadingLevel>
+            <Heading>
+              Featured Item 3 
+            </Heading>
+            <ParagraphSmall>
+              Fear is the little-death that brings total obliteration.
+            </ParagraphSmall>
+          </HeadingLevel>
+        </Block>
+      </Tab>
     </Tabs>
 
     </Block>
@@ -52,34 +88,3 @@ export default function Homepage() {
     </>
   );
 }
-
-const Outer = ({children}) => {
-  const [css, theme] = useStyletron();
-  return (
-    <div
-      className={css({
-        background: theme.colors.accent100,
-      })}
-    >
-      {children}
-    </div>
-  );
-};
-
-const Inner = ({children}) => {
-  const [css] = useStyletron();
-  return (
-    <div
-      className={css({
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        // background: theme.colors.accent200,
-        // color: theme.colors.accent700,
-        padding: '.25rem',
-      })}
-    >
-      {children}
-    </div>
-  );
-};
