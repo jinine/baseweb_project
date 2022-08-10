@@ -7,6 +7,7 @@ import {Block} from 'baseui/block';
 import {Tabs, Tab} from 'baseui/tabs-motion';
 import {Heading, HeadingLevel} from 'baseui/heading';
 import {ParagraphSmall} from 'baseui/typography';
+import {Button} from 'baseui/button';
 
 //icons
 import Icon from 'baseui/icon/check'
@@ -30,13 +31,13 @@ export default function Homepage() {
         }}
       >
     <div style={{width:'100%'}}>
-      <div style={{width:'50%', float:'left', padding:'25px'}}>
+      <div style={{width:'50%', float:'left', padding:'100px', paddingLeft:'250px'}}>
 
     <Block
       backgroundColor="white"
-      width="80%"
+      width="65%"
       align = "left"
-      height="400px"
+      height="600px"
     >
       <Tabs
       activeKey={activeKey}
@@ -49,9 +50,17 @@ export default function Homepage() {
             <Heading>
               Featured Item 1 
             </Heading>
+              <h3>I must not fear.</h3>
             <ParagraphSmall>
-              I must not fear.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            <br />Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+            <br />when an unknown printer took a galley of type and scrambled it to make a type 
+            <br />specimen book.
             </ParagraphSmall>
+            <br />
+            <br />
+            <br />
+            <Button onClick={() => alert('thank you 🙂')}>Click me!</Button>
           </HeadingLevel>
         </Block>
       </Tab>
@@ -61,9 +70,19 @@ export default function Homepage() {
             <Heading>
               Featured Item 2
             </Heading>
+            <h3>
+            Fear is the mind-killer. 
+            </h3>
             <ParagraphSmall>
-              Fear is the mind-killer. 
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            <br />Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+            <br />when an unknown printer took a galley of type and scrambled it to make a type 
+            <br />specimen book.
             </ParagraphSmall>
+            <br />
+            <br />
+            <br />
+            <Button onClick={() => alert('thank you 🙂')}>Another Click!</Button>
           </HeadingLevel>
         </Block>
       </Tab>
@@ -73,9 +92,19 @@ export default function Homepage() {
             <Heading>
               Featured Item 3 
             </Heading>
-            <ParagraphSmall>
+            <h3>
               Fear is the little-death that brings total obliteration.
+            </h3>
+            <ParagraphSmall>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            <br />Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+            <br />when an unknown printer took a galley of type and scrambled it to make a type 
+            <br />specimen book.
             </ParagraphSmall>
+            <br />
+            <br />
+            <br />
+            <Button onClick={() => alert('thank you 🙂')}>Last Button!</Button>
           </HeadingLevel>
         </Block>
       </Tab>
